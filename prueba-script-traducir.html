@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$( "span" ).click(function() {
+				if($(this).hasClass('optesp')){
+				  	$( this ).css("color", "black");
+					$( this ).css("cursor", "");
+					$(".opteng").css("color", "grey");
+					$(".opteng").css("cursor", "pointer");
+					$(".esp").css("display", "");
+					$(".eng").hide();
+					if($(".post-labels:contains('#english')")) {
+						$(".post-outer").hide;
+					}
+				}
+				else if($(this).hasClass('opteng')){
+					$( this ).css("color", "black");
+					$( this ).css("cursor", "");
+					$(".optesp").css("color", "grey");
+					$(".optesp").css("cursor", "pointer");
+					$(".eng").css("display", "");
+					$(".esp").hide();
+					if($(".post-labels:contains('#spanish')")) {
+						$(".post-outer").hide;
+					}
+			}
+			});
+		</script>
+	</head>
+	<body>
+		<span class="opteng">ENG </span>|<span class="optesp" style="cursor:pointer; color: grey"> ESP</span>
+		<div class="post-outer">1-español
+			<div class="post-labels">#spanish
+			</div>
+		</div>
+		<div class="post-outer">2-inglés
+			<div class="post-labels">#english
+			</div>
+		</div>		
+	</body>
+</html>
